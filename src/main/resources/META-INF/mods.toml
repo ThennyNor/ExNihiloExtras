@@ -1,17 +1,17 @@
 modLoader="javafml"
 loaderVersion="[43,)"
-#issueTrackerURL="https://github.com/Christofmeg/Ex-Nihilo-Extras/issues" #optional
+#issueTrackerURL="https://github.com/Christofmeg/ExNihiloExtras/issues" #optional
 license="The MIT License (MIT)"
 [[mods]]
 modId="exnihiloextras"
 version="1.19.2-1.0.0"
 displayName="Ex Nihilo Extras"
-#displayURL="https://github.com/Christofmeg/Ex-Nihilo-Extras" #optional
-logoFile="pack.png"
+#displayURL="https://github.com/Christofmeg/ExNihiloExtras" #optional
+logoFile="icon.png"
 #credits=""
 authors="Christofmeg"
 description='''
-JEI addon that adds extra pages.
+Addon for Ex Nihilo: Sequentia adding extra features.
 '''
 [[dependencies.exnihiloextras]]
     modId="forge"
