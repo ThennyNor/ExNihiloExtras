@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+#issueTrackerURL="https://github.com/Christofmeg/Ex-Nihilo-Extras/issues" #optional
+license="The MIT License (MIT)"
+[[mods]]
+modId="exnihiloextras"
+version="1.19.2-1.0.0"
+displayName="Ex Nihilo Extras"
+#displayURL="https://github.com/Christofmeg/Ex-Nihilo-Extras" #optional
+logoFile="pack.png"
+#credits=""
+authors="Christofmeg"
+description='''
+JEI addon that adds extra pages.
+'''
+[[dependencies.exnihiloextras]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.exnihiloextras]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2,1.19.3)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.exnihiloextras]]
+    modId="exnihilosequentia"
+    mandatory=true
+    versionRange="[4.2.0,)"
+    ordering="NONE"
+    side="BOTH"
+[modproperties.exnihiloextras]
+    catalogueImageIcon="exnihiloextras-icon.png"
