@@ -1,12 +1,12 @@
 modLoader="javafml"
 loaderVersion="[43,)"
-#issueTrackerURL="https://github.com/Christofmeg/ExNihiloExtras/issues" #optional
+issueTrackerURL="https://github.com/Christofmeg/ExNihiloExtras/issues" #optional
 license="The MIT License (MIT)"
 [[mods]]
 modId="exnihiloextras"
-version="1.19.2-1.0.0"
+version="${file.jarVersion}"
 displayName="Ex Nihilo Extras"
-#displayURL="https://github.com/Christofmeg/ExNihiloExtras" #optional
+displayURL="https://github.com/Christofmeg/ExNihiloExtras" #optional
 logoFile="icon.png"
 #credits=""
 authors="Christofmeg"
