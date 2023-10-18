@@ -1,16 +1,22 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
-		mavenCentral()
-        maven { url = 'https://maven.minecraftforge.net/' }
-        maven { url = 'https://maven.parchmentmc.org' }
-		maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
-    }
-    resolutionStrategy {
-        eachPlugin {
-            if (requested.id.toString() == 'org.spongepowered.mixin') {
-                useModule("org.spongepowered:mixingradle:${requested.version}")
-            }
+        maven {
+            name = 'Quilt'
+            url = 'https://maven.quiltmc.org/repository/release'
         }
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        maven {
+            name = 'Sponge Snapshots'
+            url = 'https://repo.spongepowered.org/repository/maven-public/'
+        }
+        mavenCentral()
     }
 }
+
+rootProject.name = 'Ex Nihilo Extras'
+include("Common", "Fabric", "Forge")
+include("Quilt")
