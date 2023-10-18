@@ -1,1 +1,1 @@
-Port Quilt integration to 1.19.3
+Remove MixinExtras from jar in jar
