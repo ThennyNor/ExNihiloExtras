@@ -2,9 +2,10 @@ package com.christofmeg.exnihiloextras.init;
 
 import com.christofmeg.exnihiloextras.ExNihiloExtras;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -35,10 +36,15 @@ public class ItemRegistration {
     public static void registerItems() {
         Registry.register(Registries.ITEM, new Identifier(ExNihiloExtras.MOD_ID, "doll_bee"), DOLL_BEE);
         Registry.register(Registries.ITEM, new Identifier(ExNihiloExtras.MOD_ID, "doll_frog"), DOLL_FROG);
-        ItemGroupEvents.modifyEntriesEvent(ExNihiloExtras.ITEM_GROUP).register(entries -> {
-            entries.add(DOLL_BEE);
-            entries.add(DOLL_FROG);
-        });
     }
+
+    @SuppressWarnings("unused")
+    public static final ItemGroup ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(ExNihiloExtras.MOD_ID, "general"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemGroup." + ExNihiloExtras.MOD_ID + ".general"))
+                    .icon(() -> new ItemStack(ItemRegistration.DOLL_FROG)).entries((displayContext, entries) -> {
+                        entries.add(DOLL_BEE);
+                        entries.add(DOLL_FROG);
+                    }).build());
 
 }
