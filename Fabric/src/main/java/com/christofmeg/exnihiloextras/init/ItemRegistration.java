@@ -13,28 +13,26 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-@SuppressWarnings("unused")
 public class ItemRegistration {
 
-    public static final Item DOLL_BEE = Registry.register(Registry.ITEM,
-            new Identifier(ExNihiloExtras.MOD_ID, "doll_bee"),
-            new Item(new FabricItemSettings().group(ExNihiloExtras.ITEM_GROUP)) {
-                @Override
-                public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-                    tooltip.add(Text.translatable(ExNihiloExtras.MOD_ID + ".tooltip.doll.bee"));
-                }
-            });
+    public static final Item DOLL_BEE = new Item(new FabricItemSettings().group(ExNihiloExtras.ITEM_GROUP)) {
+        @Override
+        public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+            tooltip.add(Text.translatable(ExNihiloExtras.MOD_ID + ".tooltip.doll.bee"));
+        }
+    };
 
-    public static final Item DOLL_FROG = Registry.register(Registry.ITEM,
-            new Identifier(ExNihiloExtras.MOD_ID, "doll_frog"),
-            new Item(new FabricItemSettings().group(ExNihiloExtras.ITEM_GROUP)) {
-                @Override
-                public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-                    tooltip.add(Text.translatable(ExNihiloExtras.MOD_ID + "." + "tooltip.doll.frog"));
+    public static final Item DOLL_FROG = new Item(new FabricItemSettings().group(ExNihiloExtras.ITEM_GROUP)) {
+        @Override
+        public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+            tooltip.add(Text.translatable(ExNihiloExtras.MOD_ID + "." + "tooltip.doll.frog"));
 
-                }
-            });
+        }
+    };
 
-    public static void registerItems() {}
+    public static void registerItems() {
+        Registry.register(Registry.ITEM, new Identifier(ExNihiloExtras.MOD_ID, "doll_bee"), DOLL_BEE);
+        Registry.register(Registry.ITEM, new Identifier(ExNihiloExtras.MOD_ID, "doll_frog"), DOLL_FROG);
+    }
 
 }
